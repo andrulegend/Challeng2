@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container py-5">
+
+    <!-- Welcome section -->
+    <div class="mb-5">
+        <p class="text-secondary mb-1">YOUR ACCOUNT</p>
+        <h1>Welcome back, {{ username }}.</h1>
+        <p class="text-secondary">
+            Manage your account and security settings.
+        </p>
+    </div>
+
+    <!-- Dashboard cards -->
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="card-title">Account</h5>
+                    <p class="text-secondary">
+                        Your account is ready to use.
+                    </p>
+                    <span class="badge text-bg-success">
+                        Active
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="card-title">Security</h5>
+                    <p class="text-secondary">
+                        Keep your credentials private and secure.
+                    </p>
+                    <span class="badge text-bg-primary">
+                        Account security
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="card-title">Session</h5>
+                    <p class="text-secondary">
+                        You are currently logged in.
+                    </p>
+                    <a href="{{ url_for('logout') }}"
+                    class="btn btn-outline-danger">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
